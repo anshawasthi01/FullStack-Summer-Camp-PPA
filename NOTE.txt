@@ -1,0 +1,5 @@
+V8 engine, Javascript compiler made of C++ libraries
+
+Node js is a js runtime, which is build upon V8 engine
+
+Before 2008 Javascript only run in browser, we can't use js in our locak environment
