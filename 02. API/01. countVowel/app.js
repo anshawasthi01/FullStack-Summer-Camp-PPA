@@ -1,6 +1,5 @@
 // Postman URL : localhost:3050/countVowels
 
-
 const express = require("express")
 
 const app = express();
