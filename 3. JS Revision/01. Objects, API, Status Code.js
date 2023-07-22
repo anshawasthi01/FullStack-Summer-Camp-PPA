@@ -1,6 +1,7 @@
 res.status(200).send({});
 
 // Temporal Literal
+
 let x = 123
 console.log(`Trying template literals: ${x + 1}`)
 
