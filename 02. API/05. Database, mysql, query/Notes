@@ -1,0 +1,16 @@
+const { application } = require("express")
+
+Frontend -> Middleware -> Backend
+
+// user_id, rest_id
+    - Common checks/validations that needs to be done in a lot of application
+    - Error Handling
+    - Responsive similar
+    - Authentication & Authorization & One 
+    - Logging (Observability)
+
+Restaurant unserviceable
+Restaurant not open at this time 
+Restaurant unavailable 
+
+DRY Principle -> Don't repeat yourself
