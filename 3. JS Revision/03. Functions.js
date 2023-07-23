@@ -70,7 +70,7 @@ function* getOddNums(limit) {
 }
 
 // Stream Processing 
-let x = getOddNums(10) // Generator
+let x = getOddNums(10) // Generator Function
 
 console.log(x.next().value)
 console.log(x.next().value)
