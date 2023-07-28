@@ -1,0 +1,14 @@
+const { application } = require("express")
+
+Frontend -> Middleware -> Backend
+
+DRY Principle -> Don't repeat yourself
+
+env varible go into CI/CD while build of your project -> devops team ko bta do they take care
+
+
+
+
+
+
+
