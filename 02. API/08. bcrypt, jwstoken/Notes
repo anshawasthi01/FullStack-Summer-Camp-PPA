@@ -1,0 +1,27 @@
+Frontend -> Login/Pass -> Backend
+-> newPage
+
+JWT Token - JSON Web Token
+
+Frontend -> Backend(Login Pass)
+Bac -> Front(Token)
+
+Fron -> Back(Token - Header part of the request)
+
+Where to store this token?
+Cookies are primarily for reading server-side, local storage can only beread by the client-side
+
+Local Storage - Persistent one 
+Cookies - Persistent(Token(expiry) is stored here)
+variable you created - Not a good Idea 
+
+Access Token (Shorter Expiry) -> Share it across -> Everyone can access for unlimited time 
+
+1 month 
+
+Refresh Token(Longer Expiry) - token with which you can refresh your access token 
+
+Access Token(1), Refresh token(100)
+backend(1, 100) -> debug(100, 2)
+
+Path2D(1, 100) -> backend
