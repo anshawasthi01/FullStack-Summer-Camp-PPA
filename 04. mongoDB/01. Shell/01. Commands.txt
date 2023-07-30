@@ -1,0 +1,87 @@
+- mongosh
+- show dbs
+- Create DB
+	- use Zomato; (jb tk db m data nahi hoga tb tk vo show nahi hoga)
+- Collections : 
+	- db.collections
+
+- CRUD
+	- db.resturants.insertOne({name: "Haldiram", cuisine: "Indian"})
+		return insetId
+			{
+				acknowledged: true,
+				insertId: ObjectId("64128yejdkast89uigqwegd8uijqw")
+    		}
+
+	- db.resturants.find()   (gives all the docs with id)
+	- db.resturants.insertOne({name: "Haldiram", cuisine: "Indian", _id : "askhkahklasdklask"})   (can give id with our choice)
+ 
+	- db.resturants.insertMany([{name: "Haldiram", cuisine: "Indian"}])
+
+	- .findOne() : gives first one
+	- .findOne({name: "Haldiram"}) // _id: 0 that it did not show id
+
+	- db.resturants.find({name : "Starbucks", cuisine : "Coffee"}, {cuisine : 1, _id : 0})
+	- db.resturants.find({name : "Starbucks", cuisine : "Coffee"}, {cuisine : 1, name : 1, _id : 0})
+
+	- db.resturants.find({cuisine : {"$in" : ["Coffee", "Indian"]}})
+	- db.resturants.find({cuisine : "Indian"})
+	- db.resturants.find({cuisine : {"$eq" : "Indian"}})
+	- db.resturants.find({rating : {"$eq" : 4}})
+	- db.resturants.find({rating : {"$gt" : 3}})
+	- db.resturants.find({rating : {"$gt" : 3}})
+	- db.resturants.find({rating : {"$lt" : 5}})
+	- db.resturants.find({rating : {"$ne" : 5}})  (ne means not equal)
+	- db.resturants.find({rating : {"$nin" : [3, 4]}})   (nin not in this array )
+	- db.resturants.find({"$or" : [ {rating : 4}, {rating : 3} ]})
+	- db.resturants.find({rating : {"$not" : {"$eq" : 3 }}})
+
+
+
+
+	- db.resturants.updateMany({}, {"$set" : {rating : 4})
+	- db.resturants.updateMany({cuisine : "Indian"}, {"$set" : {setCuisine : "North India"})
+	- db.resturants.find({setCuisine : {$exists : true}})
+	- db.resturants.find({rating : {"$type" : "string"}})
+
+	- db.resturants.find().sort({"rating" : 1})
+	- db.resturants.find().sort({"rating" : -1}).limit(2)
+	- db.resturants.find().sort({"rating" : -1}).skip(2).limit(2)
+
+	- db.resturants.deleteOne({})
+
+	- db.resturants.updateOne({cuisine : "Chinese"}, {"$set" : {name : "Wow momos"}})
+	- db.resturants.updateOne({cuisine : "Chinese"}, {"$set" : {name : "Wow momos"}}, {"upsert" : true})
+
+	- db.resturants.updateMany({}, {"$set" : {prev5Ratings}})
+	- db.resturants.updateMany({}, {"$set" : {prev5Ratings : [2,3,4]}})  // {} means insert array in the all the field of the table
+
+	- db.resturants.updateMany({_id : ObjectId("sjdgsdh78326rujwds") }, {"$set" : {prev5Ratings : [2, 6, 7]}})
+
+	- db.resturants.find({pre5Ratings : {"$elemMatch" : {"$eq" : 7 }}})
+	- db.resturants.find({pre5Ratings : {"$elemMatch" : {"$lt" : 7 }}})
+
+	- db.resturants.updateOne({cuisine : "Chinese"}, {"$push" : {prev5Ratings : 6}})
+	- db.resturants.find({prev5Ratings : {"$elemMatch" : {"$gt" : 5}}})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
