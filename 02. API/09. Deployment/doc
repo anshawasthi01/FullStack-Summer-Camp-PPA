@@ -1,0 +1,8 @@
+setup : npm init -y
+start : npm run dev
+deployment : https://render.com/
+localhost : localhost:3001
+Build Command : npm i or npm install
+Start Command : npm run dev
+
+deployed link : https://sampleapi-5nn9.onrender.com/
