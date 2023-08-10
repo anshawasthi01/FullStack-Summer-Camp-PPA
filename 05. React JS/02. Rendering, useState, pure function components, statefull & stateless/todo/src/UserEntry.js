@@ -1,8 +1,9 @@
 import React from 'react';
 
+// Pure Funtions -> No state own -> apne andr hi kaam krte h global scope se koi mtlb nahi
 const UserEntry = (props) => {
     return (
-        <li>
+        <li key = {props.name}>
             <span>{props.name}</span>
             &nbsp; &nbsp;&nbsp;
             <span>{props.college}</span>
@@ -14,4 +15,5 @@ const UserEntry = (props) => {
     )
 }
 
-export default UserEntry
+export default React.memo(UserEntry);
+// agr same input h to rerender krne ki koi jroort nahi
